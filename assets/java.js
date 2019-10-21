@@ -14,6 +14,14 @@ if (charNum>128) {
 
 else if (charNum<8) {
     charNum = Math.floor(Math.random() * 128) + 8
+}
+
+else if (7<charNum<129) {
+    charNum=charNum
+}
+
+else {
+    charNum = Math.floor(Math.random() * 128) + 8
 };
 
 if (specialChar) {
@@ -70,6 +78,6 @@ function makeid(charNum) {
 
 console.log(makeid(charNum));
 
-function genrator() {
-    document.getElementById("password_output") = makeid(charNum);
+function generator() {
+    document.getElementById("password_output").innerHTML = makeid(charNum);
   }
