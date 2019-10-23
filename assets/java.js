@@ -8,13 +8,22 @@ var feedBack = [charNum, specialChar, upperCase, lowerCase, numbers]
 
 console.log(feedBack)
 
-if (charNum>128) {
-    charNum = Math.floor(Math.random() * 128) + 8
-}
+// while(charNum<8 || charNum>128) {
+//     charNum = prompt("ERROR: How long would you like your password? Select a number between 8 and 128.")
+// }
 
-else if (charNum<8) {
-    charNum = Math.floor(Math.random() * 128) + 8
-}
+// if(7<charNum<129) {
+//     break;
+// }
+
+
+// if (charNum>128) {
+//     charNum = Math.floor(Math.random() * 128) + 8
+// }
+
+// else if (charNum<8) {
+//     charNum = Math.floor(Math.random() * 128) + 8
+// }
 
 else if (7<charNum<129) {
     charNum=charNum
