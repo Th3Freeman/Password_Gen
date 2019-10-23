@@ -89,5 +89,13 @@ console.log(makeid(charNum));
 
 function generator() {
     document.getElementById("password_output").innerHTML = makeid(charNum);
+    console.log(makeid(charNum));
 }
 
+function clipBoard() {
+    var copyText = document.getElementById("password_output");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    alert("Password Copied");
+}
