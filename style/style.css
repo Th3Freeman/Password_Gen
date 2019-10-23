@@ -1,0 +1,15 @@
+#password_output {
+    height: 2vh;
+    width: 10vw;
+    text-align: center;
+    margin: 2vh, 5vw;
+}
+
+.outPut {
+    padding: 3vh;
+    margin: 3vh, 6vw;
+    border: 1vh, 1vw;
+    border-style: solid;
+    text-align: center;
+}
+

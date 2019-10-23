@@ -16,27 +16,35 @@
 
 <body>
 
-    <div>
-        <div class="row content">
-            <div class="col">
-                <h3>Password Generator</h3>                    
-                <div class="row">
-                    <div class="col"></div>
-                    <div class="col"></div>
-                    <div class="col"></div>
+    <div class="content">
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4">
+                <h3>Password Generator</h3>
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+        <hr>
+        <div class="row outPut">
+            <div class="col-3">
+            </div>
+            <div class="col-6 outPut">
+                <p id="password_output"></p>
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="genBut">
+                    <button onclick=generator()>Generate Password</button>
                 </div>
-                <hr>
-                <div class="row">
-                    <div class="col">
-                            <h1 id="password_output"></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                            <button id=genPass onclick=generator()>Generate Password</button>
-                    </div>
-                </div>
-                <hr>
+            </div>
+            <div class="col-4">
             </div>
         </div>
     </div>
@@ -50,7 +58,9 @@
 
 
 
-    
+
+
+
     <script src="assets/java.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
