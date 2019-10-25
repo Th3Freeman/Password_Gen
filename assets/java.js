@@ -5,6 +5,7 @@ var lowerCase;
 var numbers;
 var feedBack;
 
+<<<<<<< HEAD
 function charPrompt() {
     alert("Answer the prompts to generate a password. If you dont any attributes then it assumes you couldnt decide and will enable everything.")
 
@@ -28,6 +29,27 @@ function attPrompt() {
 
 // attPrompt();
 
+=======
+function userPrompt(){
+    alert("Answer the prompts to generate a password. If you choose an invalid number of characters a valid number will be chosen at random. If you dont any attributes then it assumes you couldnt decide and will enable everything.")
+    
+    charNum = prompt("How long would you like your password? Select a number between 8 and 128.")
+    
+    if (charNum < 8 || charNum > 128){
+        alert("you picked a password length shorter than 8 or longer than 128");
+        userPrompt();
+    };
+
+    specialChar = confirm("Would you like any special characters?")
+    upperCase = confirm("Would you like any Uppercase Letters?")
+    lowerCase = confirm("Would you like any Lowercase Letters?")
+    numbers = confirm("Would you like any Numbers?")
+    feedBack = [charNum, specialChar, upperCase, lowerCase, numbers]
+}
+
+userPrompt();
+
+>>>>>>> 917795cffa212a34aeec886ec4785e5ef07423cc
 console.log(feedBack)
 
 
@@ -86,9 +108,13 @@ function makeid(charNum) {
 console.log(makeid(charNum));
 
 function generator() {
+<<<<<<< HEAD
     charPrompt();
 
     attPrompt();
+=======
+    // userPrompt();
+>>>>>>> 917795cffa212a34aeec886ec4785e5ef07423cc
     document.getElementById("password_output").innerHTML = makeid(charNum);
     console.log(makeid(charNum));
 }
