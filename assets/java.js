@@ -1,37 +1,35 @@
-alert("Answer the prompts to generate a password. If you choose an invalid number of characters a valid number will be chosen at random. If you dont any attributes then it assumes you couldnt decide and will enable everything.")
-var charNum = prompt("How long would you like your password? Select a number between 8 and 128.")
-var specialChar = confirm("Would you like any special characters?")
-var upperCase = confirm("Would you like any Uppercase Letters?")
-var lowerCase = confirm("Would you like any Lowercase Letters?")
-var numbers = confirm("Would you like any Numbers?")
-var feedBack = [charNum, specialChar, upperCase, lowerCase, numbers]
+var charNum;
+var specialChar;
+var upperCase;
+var lowerCase;
+var numbers;
+var feedBack;
+
+function charPrompt() {
+    alert("Answer the prompts to generate a password. If you dont any attributes then it assumes you couldnt decide and will enable everything.")
+
+    charNum = prompt("How long would you like your password? Select a number between 8 and 128.")
+
+    if (charNum < 8 || charNum > 128) {
+        alert("you picked a password length shorter than 8 or longer than 128");
+        charPrompt();
+    };
+
+}
+
+function attPrompt() {
+    specialChar = confirm("Would you like any special characters?")
+    upperCase = confirm("Would you like any Uppercase Letters?")
+    lowerCase = confirm("Would you like any Lowercase Letters?")
+    numbers = confirm("Would you like any Numbers?")
+};
+
+// charPrompt();
+
+// attPrompt();
 
 console.log(feedBack)
 
-// while(charNum<8 || charNum>128) {
-//     charNum = prompt("ERROR: How long would you like your password? Select a number between 8 and 128.")
-// }
-
-// if(7<charNum<129) {
-//     break;
-// }
-
-
-if (charNum > 128) {
-    charNum = Math.floor(Math.random() * 128) + 8
-}
-
-else if (charNum < 8) {
-    charNum = Math.floor(Math.random() * 128) + 8
-}
-
-else if (7 < charNum < 129) {
-    charNum = charNum
-}
-
-else {
-    charNum = Math.floor(Math.random() * 128) + 8
-};
 
 if (specialChar) {
     var specials = "!@#$%^&*()_=+"
@@ -88,6 +86,9 @@ function makeid(charNum) {
 console.log(makeid(charNum));
 
 function generator() {
+    charPrompt();
+
+    attPrompt();
     document.getElementById("password_output").innerHTML = makeid(charNum);
     console.log(makeid(charNum));
 }
